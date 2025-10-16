@@ -13,7 +13,6 @@
 <body>
   <!-- HERO (con placeholder de fondo y logo encima) -->
   <header class="hero" role="banner">
-    <!-- background image via CSS .hero (clase .hero--img añadida en CSS/HTML si quieres inline) -->
     <div class="hero__overlay">
       <div class="hero__logo">
         <h1 class="logo">EBRU</h1>
@@ -21,6 +20,8 @@
       </div>
     </div>
   </header>
+
+
 
   <!-- INTRO principal -->
   <main>
@@ -31,7 +32,7 @@
         <!-- imagen miniatura / placeholder -->
         <figure class="intro__thumb" aria-hidden="true">
           <!-- Usa <img src="images/intro-thumb.jpg"> o background via CSS -->
-          <img src="images/placeholder-400x300.png" alt="Caja EBRU con flor artesanal (placeholder)">
+          <img src="assets/images/primera.jpg" alt="Caja EBRU con flor artesanal y accesorios" />
         </figure>
 
         <div class="intro__text">
@@ -40,6 +41,10 @@
           </p>
         </div>
       </div>
+
+      <a href="productos.html" target="_blank">
+      <button class="btn btn--outline" type="button" aria-label="Enviar mensaje">Más productos EBRU</button>
+      </a>
     </section>
 
     <!-- TRES CAJITAS: usamos grid para controlarlas -->
@@ -71,8 +76,13 @@
         En Ebru entendemos que regalar no es solo un gesto, sino una forma de hablar sin palabras. Buscamos emocionar, sorprender y dejar huella.
       </p>
       <div class="meaning__actions">
+        <a href="https://wa.me/573002672038" target="_blank">
         <button class="btn btn--primary" type="button" aria-label="Quiero información">Quiero información</button>
+        </a>  
       </div>
+      <figure class="intro__thumb" aria-hidden="true">
+      <img src="assets/images/dos.jpg" alt="Manos sosteniendo una flor artesanal de papel" class="meaning__img" />
+      </figure>  
     </section>
 
     <!-- Elige la tuya (cards con grid) -->
@@ -81,7 +91,7 @@
 
       <div class="choose__grid">
         <article class="card">
-          <div class="card__img" style="background-image: url('images/placeholder-600x400.jpg')" aria-hidden="true"></div>
+          <div class="card__img" style="background-image: url('assets/images/uno.jpg')" aria-hidden="true"></div>
           <div class="card__body">
             <p><strong>Box Bloom</strong></p>
             <p class="card__price">Flores + cadena letra $65.000</p>
@@ -89,7 +99,7 @@
         </article>
 
         <article class="card">
-          <div class="card__img" style="background-image: url('images/placeholder-600x400.jpg')" aria-hidden="true"></div>
+          <div class="card__img" style="background-image: url('assets/images/dos.jpg')" aria-hidden="true"></div>
           <div class="card__body">
             <p><strong>Box Essence</strong></p>
             <p class="card__price">Bouquet + Set accesorios $75.000</p>
@@ -97,7 +107,7 @@
         </article>
 
         <article class="card">
-          <div class="card__img" style="background-image: url('images/placeholder-600x400.jpg')" aria-hidden="true"></div>
+          <div class="card__img" style="background-image: url('assets/images/portada.jpg')" aria-hidden="true"></div>
           <div class="card__body">
             <p><strong>Box Aura</strong></p>
             <p class="card__price">Bouquet grande + accesorio personalizado $85.000</p>
@@ -126,9 +136,15 @@
 
       <div class="testimonials__actions">
         <!-- botones primarios/secundarios marcados -->
+        <a href="https://wa.me/573002672038" target="_blank">
         <button class="btn btn--outline" type="button" aria-label="Enviar mensaje">Enviar mensaje</button>
+        </a>
+        <a href="https://wa.me/573002672038" target="_blank">
         <button class="btn btn--outline" type="button" aria-label="Comprar">Comprar</button>
+        </a>
+        <a href="https://wa.me/573002672038" target="_blank">
         <button class="btn btn--outline" type="button" aria-label="Personalizar">Personalizar</button>
+        </a>
       </div>
     </section>
   </main>
@@ -143,6 +159,7 @@
         <li>Personalízalo.</li>
         <li>Sorprende con el arte hecho papel.</li>
       </ul>
+      <img src="assets/images/Screenshot.jpg" alt="Logo EBRU El Arte Hecho Papel" class="footer__img" />
     </div>
 
     <div class="footer__contact">
