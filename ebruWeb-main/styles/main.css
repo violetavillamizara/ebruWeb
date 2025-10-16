@@ -1,0 +1,271 @@
+/* ===========================
+   Variables y base (mobile-first)
+   =========================== */
+:root{
+  --primary: #cfa88b;      /* marrón claro */
+  --primary-contrast: #fff;
+  --muted: #f6ede6;        /* beige claro */
+  --text: #222;
+  --card-border: rgba(0,0,0,0.08);
+  --radius: 8px;
+  --font-sans: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --max-width: 900px;
+}
+
+/* Reset ligero */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--font-sans);
+  color:var(--text);
+  background:#fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.4;
+}
+
+/* Contenedor central móvil (si quieres centrar el contenido en pantallas anchas) */
+main{max-width:var(--max-width); margin:0 auto;}
+
+/* ===========================
+   HERO
+   =========================== */
+.hero{
+  position:relative;
+  width:100%;
+  height:360px; /* tamaño móvil recomendado, ajustable */
+  background-color:var(--muted);
+  /* placeholder background image (cambia la URL por tu imagen grande de hero) */
+  background-image: url('assets/images/portada.jpg');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  padding:1.2rem;
+}
+
+/* Capa de overlay para contraste del logo */
+.hero__overlay{
+  width:100%;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  background:linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.25) 100%);
+  padding:1.6rem 0;
+}
+
+/* Logo encima de la imagen */
+.logo{
+  font-family:var(--font-serif);
+  color:var(--primary-contrast);
+  font-size:2.2rem;
+  letter-spacing:2px;
+  margin:0;
+}
+.logo__tag{
+  margin:0.2rem 0 0;
+  font-size:0.75rem;
+  color:rgba(255,255,255,0.95);
+}
+
+/* ===========================
+   INTRO
+   =========================== */
+.intro{
+  background:var(--muted);
+  padding:1.2rem;
+}
+.intro__title{
+  font-size:1.1rem;
+  margin-bottom:0.8rem;
+  font-weight:600;
+  color:#111;
+}
+
+/* intro content: thumbnail + texto usando flexbox (columna en móvil) */
+.intro__content{
+  display:flex;
+  flex-direction:column;
+  gap:0.8rem;
+  align-items:center;
+}
+.intro__thumb img{
+  width:86%;
+  max-width:300px;
+  border-radius:6px;
+  display:block;
+}
+.intro__text{
+  font-size:0.92rem;
+  text-align:center;
+  padding:0 0.4rem;
+}
+
+/* ===========================
+   BOXES (grid)
+   =========================== */
+.boxes{
+  background:var(--primary);
+  color:var(--primary-contrast);
+  padding:1rem;
+}
+.boxes__grid{
+  /* mobile: un columna (pero usamos grid para transiciones a desktop) */
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:0.9rem;
+}
+.box{
+  border:1px solid rgba(255,255,255,0.15);
+  padding:0.9rem;
+  border-radius:var(--radius);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+}
+.box__title{ font-size:1rem; margin-bottom:0.4rem; font-weight:600;}
+.box__desc{ font-size:0.86rem; opacity:0.95;}
+
+/* ===========================
+   MEANING (CTA)
+   =========================== */
+.meaning{
+  padding:1rem;
+  text-align:center;
+  background:#fff;
+}
+.meaning__title{ font-size:1.05rem; margin-bottom:0.5rem;}
+.meaning__text{ font-size:0.92rem; margin-bottom:0.8rem; padding:0 0.4rem;}
+
+/* Botones: primario y outline */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0.6rem 0.95rem;
+  border-radius:6px;
+  font-weight:600;
+  font-size:0.95rem;
+  cursor:pointer;
+  min-height:44px; /* accesibilidad táctil */
+}
+.btn--primary{
+  background:var(--primary);
+  color:var(--primary-contrast);
+  border:2px solid rgba(0,0,0,0.02);
+}
+.btn--outline{
+  background:transparent;
+  color:var(--text);
+  border:1.5px solid var(--card-border);
+}
+
+/* ===========================
+   CHOOSE (cards grid)
+   =========================== */
+.choose{
+  padding:1rem;
+}
+.choose__title{ font-size:1.05rem; margin-bottom:0.6rem; padding-left:0.2rem;}
+.choose__grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:0.9rem;
+}
+.card{
+  border:1px solid var(--card-border);
+  border-radius:8px;
+  overflow:hidden;
+  background:#fff;
+  display:flex;
+  flex-direction:column;
+}
+.card__img{
+  height:180px;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.card__body{ padding:0.7rem; font-size:0.95rem; }
+
+/* ===========================
+   TESTIMONIOS
+   =========================== */
+.testimonials{
+  background:var(--muted);
+  padding:1rem;
+}
+.testimonials__title{ font-size:1.05rem; margin-bottom:0.6rem; text-align:center;}
+.testimonials__grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:0.8rem;
+}
+.testimonial{
+  font-style:italic;
+  font-size:0.9rem;
+  padding:0.6rem;
+  border-left:3px solid rgba(0,0,0,0.06);
+  background:#fff;
+  border-radius:6px;
+}
+.testimonial cite{ display:block; margin-top:0.4rem; font-style:normal; font-weight:600; }
+
+/* acciones (botones) en testimonios */
+.testimonials__actions{
+  display:flex;
+  flex-direction:column;
+  gap:0.6rem;
+  margin-top:0.8rem;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+.site-footer{
+  background:var(--primary);
+  color:var(--primary-contrast);
+  padding:1rem;
+}
+.footer__top{ text-align:left; padding-bottom:0.6rem; }
+.footer__title{ font-family:var(--font-serif); font-size:1.2rem; margin:0 0 0.3rem;}
+.footer__list{ margin:0.6rem 0 0 1rem; font-size:0.9rem; }
+.footer__contact{ display:flex; flex-direction:column; gap:0.6rem; font-size:0.92rem; margin-top:0.6rem;}
+
+/* ===========================
+   UTILIDADES / ACCESIBILIDAD
+   =========================== */
+a{ color:inherit; text-decoration:underline; }
+button{ border:0; background:none; }
+
+/* ===========================
+   MEDIA QUERIES (tablet+)
+   =========================== */
+@media (min-width:640px){
+  .hero{ height:420px; }
+  .intro__content{ flex-direction:row; align-items:center; justify-content:space-between; gap:1rem; padding:0 0.6rem; }
+  .intro__thumb img{ width:40%; max-width:260px; }
+  .intro__text{ width:56%; text-align:left; }
+
+  .boxes__grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .choose__grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .testimonials__grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .testimonials__actions{ flex-direction:row; justify-content:space-between; gap:0.6rem; }
+}
+
+/* media query para desktop ancho */
+@media (min-width:980px){
+  main{ padding:0 1.2rem; }
+  .hero{ height:520px; background-position: center 30%; }
+  .logo{ font-size:2.8rem; }
+}
