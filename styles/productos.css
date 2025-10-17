@@ -1,7 +1,7 @@
 /* ===========================
    Variables y base (mobile-first)
    =========================== */
-:root{
+:root {
   --primary: #cfa88b;      /* marrón claro */
   --primary-contrast: #fff;
   --muted: #f6ede6;        /* beige claro */
@@ -14,82 +14,153 @@
 }
 
 /* Reset ligero */
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family:var(--font-sans);
-  color:var(--text);
-  background:#fff;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.4;
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
 }
 
-/* Contenedor central móvil (si quieres centrar el contenido en pantallas anchas) */
-main{max-width:var(--max-width); margin:0 auto;}
+main { max-width: var(--max-width); margin: 0 auto; }
+
 
 /* ===========================
    CHOOSE (cards grid)
    =========================== */
-.choose{
-  padding:1rem;
+.choose {
+  padding: 2rem 1rem;
+  background: var(--muted);
 }
-.choose__title{ font-size:1.05rem; margin-bottom:0.6rem; padding-left:0.2rem;}
-.choose__grid{
-  display:grid;
+
+.choose__title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.choose__grid {
+  display: grid;
   grid-template-columns: 1fr;
-  gap:0.9rem;
+  gap: 1rem;
 }
-.card{
-  border:1px solid var(--card-border);
-  border-radius:8px;
-  overflow:hidden;
-  background:#fff;
-  display:flex;
-  flex-direction:column;
+
+.card {
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.card__img{
-  height:180px;
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-.card__body{ padding:0.7rem; font-size:0.95rem; }
+
+.card__img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card__body {
+  padding: 0.9rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.card__price {
+  color: var(--primary);
+  font-weight: 600;
+}
 
 /* ===========================
-   UTILIDADES / ACCESIBILIDAD
+   MEDIA QUERIES
    =========================== */
-a{ color:inherit; text-decoration:underline; }
-button{ border:0; background:none; }
-
-/* ===========================
-   MEDIA QUERIES (tablet+)
-   =========================== */
-@media (min-width:640px){
-  .hero{ height:420px; }
-  .intro__content{ flex-direction:row; align-items:center; justify-content:space-between; gap:1rem; padding:0 0.6rem; }
-  .intro__thumb img{ width:40%; max-width:260px; }
-  .intro__text{ width:56%; text-align:left; }
-
-  .boxes__grid{
-    grid-template-columns: repeat(3, 1fr);
+@media (min-width: 640px) {
+  .choose__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-
-  .choose__grid{
-    grid-template-columns: repeat(3, 1fr);
+  .hero {
+    height: 70vh;
   }
-
-  .testimonials__grid{
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .testimonials__actions{ flex-direction:row; justify-content:space-between; gap:0.6rem; }
 }
 
-/* media query para desktop ancho */
-@media (min-width:980px){
-  main{ padding:0 1.2rem; }
-  .hero{ height:520px; background-position: center 30%; }
-  .logo{ font-size:2.8rem; }
+@media (min-width: 980px) {
+  main { padding: 0 1.2rem; }
+  .choose__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .logo { font-size: 3rem; }
+}
+
+
+/* ===========================
+   DESKTOP (pantallas normales)
+   =========================== */
+@media (min-width: 980px) {
+  :root {
+    --max-width: 1100px;
+  }
+
+  main {
+    padding: 0 1.5rem;
+    max-width: var(--max-width);
+  }
+
+  .choose {
+    padding: 2rem 1.5rem;
+  }
+
+  .choose__title {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .choose__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+  }
+
+  .card__img {
+    height: 220px;
+  }
+
+  .card__body {
+    font-size: 1rem;
+  }
+
+  .card__price {
+    font-size: 1.05rem;
+  }
+}
+
+/* Sección con fondo translúcido fijo 
+.section-choose {
+  background-image: url("ebruWeb-main\assets\images\scroll.jpg");
+  background-attachment: fixed; /* mantiene fija la imagen
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}Capa semitransparente encima del fondo
+.section-choose::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(207, 168, 139, 0.45); /* tono beige transparente
+  z-index: 0;
+}Contenido encima del overlay
+.section-choose > * {
+  position: relative;
+  z-index: 1;
 }
