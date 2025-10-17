@@ -152,8 +152,8 @@ main {
 .meaning__text{ font-size:0.92rem; margin-bottom:0.8rem; padding:0 0.4rem;}
 
 .meaning__thumb img{
-  width:86%;
-  max-width:300px;
+  width:90%;
+  max-width:400px;
   border-radius:6px;
   display:block;
 }
@@ -400,14 +400,14 @@ button{ border:0; background:none; }
   }
 
   .meaning__thumb {
-    flex: 1.9;
+    flex: 1.5;
     display: flex;
     justify-content: center;
   }
 
   .meaning__img {
-    width: 300%;
-    max-width: 400px;
+    width: 500%;
+    max-width: 600px;
     height: auto;
     border-radius: 10px;
   }
@@ -418,7 +418,7 @@ button{ border:0; background:none; }
 
   .meaning__text {
     font-size: 1.05rem;
-    max-width: 300px;
+    max-width: 400px;
   }
 
   /* CHOOSE */
