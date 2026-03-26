@@ -1,226 +1,212 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <!-- ✅ SEO: título claro, corto y descriptivo -->
-  <title>EBRU | Regalos Artesanales y Flores de Papel en Bucaramanga</title>
+  <title>EBRU | Regalos Artesanales y Flores de Papel</title>
+  <meta name="description"
+    content="EBRU crea regalos únicos con flores artesanales de papel. Personaliza tu Box y sorprende con el arte hecho papel." />
 
-  <!-- ✅ Descripción SEO -->
-  <meta name="description" content="EBRU crea regalos únicos con flores artesanales de papel. Personaliza tu Box y sorprende con el arte hecho papel. Envíos en Bucaramanga y Floridablanca." />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+    rel="stylesheet">
 
-  <!-- ✅ Palabras clave (no muy usadas hoy, pero complementan el SEO local) -->
-  <meta name="keywords" content="flores de papel, regalos artesanales, Bucaramanga, Floridablanca, EBRU, arte hecho papel, cajas personalizadas" />
-
-  <!-- ✅ Autor -->
-  <meta name="author" content="EBRU - El Arte Hecho Papel" />
-
-  <!-- ✅ Open Graph / Social Preview -->
-  <meta property="og:title" content="EBRU | El Arte Hecho Papel" />
-  <meta property="og:description" content="Regalos personalizados y flores artesanales de papel que cuentan historias inolvidables." />
-  <meta property="og:image" content="https://tusitio.com/assets/images/portada.jpg" />
-  <meta property="og:url" content="https://tusitio.com/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="es_CO" />
-
-  <!-- ✅ Favicon -->
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
-
-  <!-- ✅ Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
-
-  <!-- ✅ CSS -->
   <link rel="stylesheet" href="styles/main.css">
-
-  <!-- ✅ Accesibilidad y UX -->
-  <meta name="theme-color" content="#fff8f0" />
 </head>
 
 <body>
-  <!-- HERO -->
-  <header class="hero" role="banner">
-    <div class="hero__overlay">
-      <div class="hero__logo">
-        <h1 class="logo">EBRU</h1>
-        <p class="logo__tag">El Arte Hecho Papel</p>
+  <!-- HEADER / NAVIGATION -->
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__logo">EBRU</div>
+      <nav class="header__nav">
+        <a href="historia.html">Nuestra Historia</a>
+        <a href="#boxes">Colección</a>
+        <a href="#testimonials">Testimonios</a>
+        <a href="velas.html">Velas</a>
+      </nav>
+      <div class="header__actions">
+        <a href="https://wa.me/573002672038" target="_blank" class="btn btn--outline-small">Contáctanos</a>
       </div>
     </div>
   </header>
 
-  <!-- INTRO -->
   <main>
-    <section class="intro" id="intro">
-      <h2 class="intro__title">Regalar es un arte y el tuyo merece ser inolvidable</h2>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__image-wrapper">
+        <img src="assets/images/daisy-bouquet.jpg" alt="Ebru Flores y Regalos" class="hero__bg-img" />
+      </div>
+      <div class="hero__content">
+        <div class="hero__text-box slide-up">
+          <p class="subtitle fade-in">El arte de regalar</p>
+          <h1 class="title-primary reveal-text">
+            <span>Arreglos Florales</span>
+            <br />
+            <span>que Hablan al Alma</span>
+          </h1>
+          <a href="#boxes" class="btn btn--primary mt-8">Explorar Colección &rarr;</a>
+        </div>
+      </div>
+    </section>
 
-      <div class="intro__content">
-        <figure class="intro__thumb">
-          <img src="assets/images/primera.jpg" 
-               alt="Caja de regalo EBRU con flores artesanales y accesorios" 
-               loading="lazy" />
-        </figure>
-
-        <div class="intro__text">
-          <p>
-            Cada <strong>INOLVIDABLE BOX</strong> cuenta una historia: la de un regalo hecho alma que perdura más allá del momento.
+    <!-- INTRO / CONCEPT -->
+    <section id="intro" class="intro-section">
+      <div class="intro-section__inner">
+        <div class="intro-section__image fade-in-up scroll-anim">
+          <img src="assets/images/ada-lovelace-box.jpg" alt="El alma de Ebru" />
+          <div class="floating-badge">
+            <span class="badge-number">100%</span>
+            <span class="badge-text">Hecho a mano</span>
+          </div>
+        </div>
+        <div class="intro-section__content fade-in-up scroll-anim" style="transition-delay: 0.2s;">
+          <h2 class="title-secondary">Regalar es un arte y el tuyo <br />merece ser inolvidable</h2>
+          <p class="text-body">
+            Cada <strong>INOLVIDABLE BOX</strong> cuenta una historia: la de un regalo hecho alma que perdura más allá
+            del momento. Flores artesanales elaboradas con delicadeza que capturan la belleza eterna.
           </p>
+          <a href="historia.html" class="btn btn--link">Conoce nuestra historia <span class="arrow">&rarr;</span></a>
         </div>
       </div>
-
-      <a href="productos.html" class="btn btn--outline" aria-label="Ver más productos de EBRU">Más productos EBRU</a>
     </section>
 
-    <!-- BOXES -->
-    <section class="boxes" aria-labelledby="boxes-title">
-      <h3 id="boxes-title">Tipos de Box</h3>
+    <!-- BOXES / CATALOG -->
+    <section id="boxes" class="boxes-section">
+      <div class="boxes-section__header text-center fade-in-up scroll-anim">
+        <span class="subtitle">Nuestras Creaciones</span>
+        <h2 class="title-secondary">Order with Confidence</h2>
+      </div>
 
-      <div class="boxes__grid">
-        <article class="box">
-          <h4 class="box__title">Box Bloom</h4>
-          <p class="box__desc">Cada Box Bloom está pensada para transformar un gesto en una experiencia.</p>
-          <p class="box__desc">En su interior, las flores artesanales se abren como un suspiro de belleza acompañadas de delicados accesorios que evocan armonía, amor y sutileza.</p>
-          <p class="box__desc">Perfecta para celebrar el amor, la gratitud o la magia de un “te pienso”.</p>
+      <div class="collection-grid">
+        <!-- Card 1 -->
+        <article class="product-card fade-in-up scroll-anim" style="transition-delay: 0.1s;">
+          <div class="product-card__image-container">
+            <div class="product-card__image" style="background-image: url('assets/images/daisy-bouquet-box.jpg')"></div>
+          </div>
+          <div class="product-card__info">
+            <h3 class="product-card__title">Box Bloom</h3>
+            <p class="product-card__price">Flores + cadena letra <br><strong>$65.000</strong></p>
+            <a href="https://wa.me/573002672038" class="btn btn--outline-dark block-btn">Pedir por WhatsApp &rarr;</a>
+          </div>
         </article>
 
-        <article class="box">
-          <h4 class="box__title">Box Essence</h4>
-          <p class="box__desc">Moderna, elegante y exclusiva. Inspirada en la belleza que va más allá de un instante.</p>
-          <p class="box__desc">Combina flores artesanales con accesorios cuidadosamente seleccionados para crear un regalo que trasciende el tiempo.</p>
-          <p class="box__desc">Ideal para quienes buscan expresar sentimientos profundos con un toque de sofisticación.</p>
+        <!-- Card 2 -->
+        <article class="product-card fade-in-up scroll-anim" style="transition-delay: 0.2s;">
+          <div class="product-card__image-container">
+            <div class="product-card__image" style="background-image: url('assets/images/dos.jpg')"></div>
+          </div>
+          <div class="product-card__info">
+            <h3 class="product-card__title">Box Essence</h3>
+            <p class="product-card__price">Bouquet + Set accesorios <br><strong>$75.000</strong></p>
+            <a href="https://wa.me/573002672038" class="btn btn--outline-dark block-btn">Pedir por WhatsApp &rarr;</a>
+          </div>
         </article>
 
-        <article class="box">
-          <h4 class="box__title">Box Aura</h4>
-          <p class="box__desc">Elegancia y calidez en cada detalle, diseñada para crear momentos inolvidables.</p>
-          <p class="box__desc">Flores y accesorios que se entrelazan para crear un momento inolvidable.</p>
-          <p class="box__desc">Cada elemento ha sido elegido para reflejar la energía sutil de quien regala y la belleza de quien recibe.</p>
+        <!-- Card 3 -->
+        <article class="product-card fade-in-up scroll-anim" style="transition-delay: 0.3s;">
+          <div class="product-card__image-container">
+            <!-- Usando la de portada pero ajustada o otra si hay -->
+            <div class="product-card__image" style="background-image: url('assets/images/white-rose.jpg')"></div>
+          </div>
+          <div class="product-card__info">
+            <h3 class="product-card__title">Box Aura</h3>
+            <p class="product-card__price">Bouquet + accesorio personalizado <br><strong>$85.000</strong></p>
+            <a href="https://wa.me/573002672038" class="btn btn--outline-dark block-btn">Pedir por WhatsApp &rarr;</a>
+          </div>
         </article>
       </div>
     </section>
 
-    <!-- MEANING -->
-    <section class="meaning">
-      <div class="meaning__content">
-        <h2 class="meaning__title">Regalar con sentido</h2>
-        <p class="meaning__text">
-          En EBRU entendemos que regalar no es solo un gesto, sino una forma de hablar sin palabras. Buscamos emocionar, sorprender y dejar huella.
-        </p>
-        <div class="meaning__actions">
-          <a href="https://wa.me/573002672038" class="btn btn--primary" target="_blank" rel="noopener" aria-label="Solicitar información por WhatsApp">
-            Quiero información
-          </a>
+    <!-- MEANING / STORY -->
+    <section class="meaning-section">
+      <div class="meaning-section__inner fade-in-up scroll-anim">
+        <div class="meaning-section__content">
+          <h2 class="title-secondary">Regalar con sentido</h2>
+          <p class="text-body-large">
+            En EBRU entendemos que regalar no es solo un gesto, sino una forma de hablar sin palabras. Buscamos
+            emocionar, sorprender y dejar huella.
+          </p>
+          <a href="https://wa.me/573002672038" class="btn btn--primary mt-6">Personalizar mi Box</a>
+        </div>
+        <div class="meaning-section__visual">
+          <div class="image-layer image-layer--back">
+            <img src="assets/images/girl-sunflower.jpg" alt="Ebru Flores" />
+          </div>
+          <div class="image-layer image-layer--front">
+            <img src="assets/images/flower-cone.jpg" alt="Detalle Especial" />
+          </div>
         </div>
       </div>
-      <figure class="meaning__thumb">
-        <img src="assets/images/scroll.jpg"
-          alt="Manos sosteniendo una flor artesanal de papel" 
-          class="meaning__img" loading="lazy" />
-      </figure>
     </section>
 
-    <!-- CHOOSE -->
-    <section class="choose" aria-labelledby="choose-title">
-      <h2 id="choose-title" class="choose__title">Elige la tuya</h2>
-
-      <div class="choose__grid">
-        <article class="card">
-          <div class="card__img" style="background-image: url('assets/images/uno.jpg')" role="img" aria-label="Box Bloom con flores artesanales"></div>
-          <div class="card__body">
-            <p><strong>Box Bloom</strong></p>
-            <p class="card__price">Flores + cadena letra $65.000</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__img" style="background-image: url('assets/images/dos.jpg')" role="img" aria-label="Box Essence con bouquet y set de accesorios"></div>
-          <div class="card__body">
-            <p><strong>Box Essence</strong></p>
-            <p class="card__price">Bouquet + Set accesorios $75.000</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__img" style="background-image: url('assets/images/portada.jpg')" role="img" aria-label="Box Aura con bouquet grande y accesorio personalizado"></div>
-          <div class="card__body">
-            <p><strong>Box Aura</strong></p>
-            <p class="card__price">Bouquet grande + accesorio personalizado $85.000</p>
-          </div>
-        </article>
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="text-center fade-in-up scroll-anim">
+        <span class="subtitle">Experiencias Inolvidables</span>
+        <h2 class="title-secondary">Por qué nos eligen</h2>
       </div>
-    </section>
-
-    <!-- TESTIMONIOS -->
-    <section class="testimonials" aria-labelledby="testimonials-title">
-      <h2 id="testimonials-title" class="testimonials__title">Qué dicen nuestros clientes</h2>
-
-      <div class="testimonials__grid">
-        <blockquote class="testimonial">
-          <p>“El empaque, el aroma, los colores... todo fue un suspiro. Regalar Ebru es regalar arte.”<br><cite>— Laura G.</cite></p>
-        </blockquote>
-
-        <blockquote class="testimonial">
-          <p>“Nunca había visto algo así. Mis flores siguen intactas. Puro encanto.”<br><cite>— Camila R.</cite></p>
-        </blockquote>
-
-        <blockquote class="testimonial">
-          <p>“Cada pedido llega con una presentación impecable. Se nota que está hecho con amor.”<br><cite>— Valentina P.</cite></p>
-        </blockquote>
-      </div>
-
-      <div class="testimonials__actions">
-        <a href="https://wa.me/573002672038" class="btn btn--outline" target="_blank" rel="noopener" aria-label="Enviar mensaje por WhatsApp">Enviar mensaje</a>
-        <a href="https://wa.me/573002672038" class="btn btn--outline" target="_blank" rel="noopener" aria-label="Comprar por WhatsApp">Comprar</a>
-        <a href="https://wa.me/573002672038" class="btn btn--outline" target="_blank" rel="noopener" aria-label="Personalizar regalo por WhatsApp">Personalizar</a>
+      <div class="testimonials-grid mt-10">
+        <div class="testimonial-card fade-in-up scroll-anim" style="transition-delay: 0.1s;">
+          <div class="quote-icon">“</div>
+          <p class="testimonial-card__text">El empaque, el aroma, los colores... todo fue un suspiro. Regalar Ebru es
+            regalar arte.</p>
+          <p class="testimonial-card__author">— Juan V.</p>
+        </div>
+        <div class="testimonial-card fade-in-up scroll-anim" style="transition-delay: 0.2s;">
+          <div class="quote-icon">“</div>
+          <p class="testimonial-card__text">Nunca había visto algo así. Mis flores siguen intactas. Puro encanto y
+            calidad.</p>
+          <p class="testimonial-card__author">— Camila R.</p>
+        </div>
+        <div class="testimonial-card fade-in-up scroll-anim" style="transition-delay: 0.3s;">
+          <div class="quote-icon">“</div>
+          <p class="testimonial-card__text">Cada pedido llega con una presentación impecable. Se nota que está hecho con
+            amor.</p>
+          <p class="testimonial-card__author">— Valentina P.</p>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- FOOTER -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer__top">
-      <h2 class="footer__title">Gracias por visitarnos</h2>
-      <p>Haz que tu próximo regalo sea una historia para recordar.</p>
-      <ul class="footer__list">
-        <li>Elige el detalle que hable por ti.</li>
-        <li>Personalízalo.</li>
-        <li>Sorprende con el arte hecho papel.</li>
-      </ul>
-    </div>
-
-    <div class="footer__image">
-      <img src="assets/images/Screenshot.jpg" alt="Logo de EBRU El Arte Hecho Papel" class="footer__img" loading="lazy" />
-    </div>
-
-    <div class="footer__contact">
-      <address>
-        <strong>Contacto:</strong><br>
-        Bucaramanga - Floridablanca<br>
-        Whatsapp: <a href="https://wa.me/573002672038" target="_blank" rel="noopener">300 267 2038</a>
-      </address>
-
-      <div class="footer__hours">
-        <strong>Horario:</strong><br>
-        Lunes a Sábado: 9am – 6pm
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <h2 class="footer__logo">EBRU</h2>
+        <p class="footer__tagline">El Arte Hecho Papel.</p>
+        <div class="footer__socials">
+          <a href="https://www.instagram.com/ebrupapel">Instagram</a>
+          <a href="https://wa.me/573002672038">WhatsApp</a>
+        </div>
       </div>
-
-      <div class="footer__socials">
-        <a href="https://www.instagram.com/ebrupapel" target="_blank" rel="noopener" aria-label="Instagram de EBRU">@ebrupapel</a>
+      <div class="footer__links">
+        <div class="footer__column">
+          <h4>Navegación</h4>
+          <a href="#intro">Historia</a>
+          <a href="#boxes">Colección</a>
+          <a href="#testimonials">Reseñas</a>
+        </div>
+        <div class="footer__column">
+          <h4>Contacto</h4>
+          <p>Bucaramanga - Floridablanca</p>
+          <p>Lun - Sáb: 9am – 6pm</p>
+          <p>+57 300 267 2038</p>
+        </div>
       </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2026 EBRU. Todos los derechos reservados.</p>
     </div>
   </footer>
 
-  <!-- helper -->
-  <style>
-    .visually-hidden {
-      position: absolute !important;
-      height: 1px;
-      width: 1px;
-      overflow: hidden;
-      clip: rect(1px, 1px, 1px, 1px);
-      white-space: nowrap;
-    }
-  </style>
+  <script src="scripts/main.js" defer></script>
 </body>
+
 </html>
