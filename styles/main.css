@@ -6,10 +6,12 @@
   --color-bg: #FCF9F6;
   /* Beige súper claro / Nude */
   --color-surface: #FFFFFF;
-  --color-primary-dark: #B57B67;
-  /* Tono cálido / Blush terracota basado en logo */
+  --color-primary-dark: #ffeaaa;
+  /* Amarillo pollito (pops de color) */
   --color-primary-light: #DEBFA9;
   --color-accent: #CFA88B;
+  --color-flower: #941b59;
+  /* Color de las rosas (sobrio) */
   /* El beige original */
   --color-text-main: #111111;
   /* Gris muy oscuro, casi marrón */
@@ -91,7 +93,7 @@ a {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--color-primary-dark);
+  color: var(--color-flower);
   font-weight: 500;
   display: block;
   margin-bottom: 1rem;
@@ -146,14 +148,15 @@ a {
 
 .btn--primary {
   background-color: var(--color-primary-dark);
-  color: #fff;
-  box-shadow: 0 4px 15px rgba(181, 123, 103, 0.2);
+  color: var(--color-text-main);
+  /* Contraste para el amarillo */
+  box-shadow: 0 4px 15px rgba(255, 234, 170, 0.4);
 }
 
 .btn--primary:hover {
-  background-color: #9c6754;
+  background-color: #f7df9c;
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(181, 123, 103, 0.3);
+  box-shadow: 0 8px 25px rgba(255, 234, 170, 0.6);
 }
 
 .btn--outline-dark {
@@ -245,7 +248,7 @@ a {
   font-family: var(--font-serif);
   font-size: 1.8rem;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 0px;
   color: var(--color-text-main);
 }
 
@@ -412,7 +415,7 @@ a {
 .badge-number {
   font-family: var(--font-serif);
   font-size: 1.5rem;
-  color: var(--color-primary-dark);
+  color: var(--color-flower);
 }
 
 .badge-text {
@@ -636,7 +639,7 @@ a {
    FOOTER
    =========================== */
 .footer {
-  background-color: var(--color-text-main);
+  background-color: #372a19;
   color: #fff;
   padding: 5rem 5% 2rem;
 }
